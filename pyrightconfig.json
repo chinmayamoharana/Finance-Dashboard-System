@@ -1,0 +1,14 @@
+{
+  "include": [
+    "backend"
+  ],
+  "executionEnvironments": [
+    {
+      "root": "backend",
+      "extraPaths": [
+        "backend",
+        "C:/Users/mohar/AppData/Local/Programs/Python/Python313/Lib/site-packages"
+      ]
+    }
+  ]
+}
