@@ -2,7 +2,19 @@ import axios from 'axios'
 
 export const AUTH_STORAGE_KEY = 'finance-dashboard-auth'
 const AUTH_CHANGE_EVENT = 'finance-auth-changed'
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000/api'
+
+function normalizeApiBaseUrl(value) {
+  const fallbackUrl = 'http://127.0.0.1:8000/api'
+  const rawUrl = (value || fallbackUrl).trim().replace(/\/+$/, '')
+
+  if (rawUrl.endsWith('/api')) {
+    return rawUrl
+  }
+
+  return `${rawUrl}/api`
+}
+
+const API_BASE_URL = normalizeApiBaseUrl(import.meta.env.VITE_API_BASE_URL)
 
 let refreshPromise = null
 
