@@ -2,6 +2,10 @@
 
 A full-stack finance dashboard built with a Django backend and a React frontend. The application focuses on role-based access, financial record management, dashboard analytics, auditability, and practical admin workflows.
 
+## Live Project
+
+- Deployed frontend: https://finance-dashboard-system-lime.vercel.app
+
 ## Current Application Features
 
 - JWT-based registration, login, profile fetch, and refresh token rotation
@@ -469,6 +473,7 @@ npm run build
 
 ## Deployment Notes
 
+- frontend deployment: https://finance-dashboard-system-lime.vercel.app
 - `Procfile` is included for deployment use
 - WhiteNoise is configured for static files
 - keep backend environment variables set correctly in the deployment platform
